@@ -1,0 +1,33 @@
+[project]
+name = "tapo-weather-lamp"
+version = "2.0.0"
+description = "Show the weather and the hour of the day of anywhere on Earth on your Tapo bulbs"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dependencies = [
+    "fastapi>=0.110",
+    "uvicorn>=0.27",
+    "httpx>=0.26",
+]
+
+[project.optional-dependencies]
+bulbs = ["tapo>=0.8"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+weather-lamp = "tapo_weather.__main__:run"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["tapo_weather*"]
+
+[tool.setuptools.package-data]
+tapo_weather = ["web/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weather lamp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="/static/panel.css">
+</head>
+<body>
+<div class="panel">
+
+  <div class="lamp-wrap"><div class="lamp" id="lamp"></div></div>
+  <div class="readout">
+    <h1 id="cond">Pick a place</h1>
+    <div class="place" id="place">nowhere yet</div>
+    <div class="figs" id="figs"></div>
+    <div class="clock" id="clock"></div>
+    <div class="sunline" id="sunline"></div>
+  </div>
+
+  <section>
+    <p class="eyebrow">Click the map</p>
+    <div id="map"></div>
+    <p class="maphint" id="maphint">The shaded half is in darkness right now.</p>
+  </section>
+
+  <section>
+    <p class="eyebrow">Or search anywhere</p>
+    <input type="search" id="q" placeholder="City name" autocomplete="off">
+    <ul id="results"></ul>
+    <div class="chips" id="chips"></div>
+  </section>
+
+  <p class="note" id="note"></p>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="/static/panel.js"></script>
+</body>
+</html>

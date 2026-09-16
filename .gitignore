@@ -1,0 +1,62 @@
+# --------------------------------------------------------------------------- #
+# Secrets. Nothing below this line should ever reach a commit.
+# --------------------------------------------------------------------------- #
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+credentials.json
+
+# Your own list of places. The shipped presets.json is generic; this one is
+# yours, and knowing which towns you watch says something about where you live.
+presets.local.json
+
+# --------------------------------------------------------------------------- #
+# Python
+# --------------------------------------------------------------------------- #
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib60/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Testing and tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+
+# --------------------------------------------------------------------------- #
+# Editors and operating systems
+# --------------------------------------------------------------------------- #
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini

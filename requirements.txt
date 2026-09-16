@@ -1,0 +1,7 @@
+# The panel and the weather. These are enough to run in preview mode.
+fastapi>=0.110
+uvicorn>=0.27
+httpx>=0.26
+
+# Only needed to actually drive bulbs. Preview mode never imports it.
+tapo>=0.8
